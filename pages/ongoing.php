@@ -71,14 +71,93 @@
                 </div>
             </div>
         </nav>
-        <div id="page-wrapper" style="padding-top: 10px;">
+        <div id="page-wrapper" style="padding-top: 10px;" id="body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header" id="ProName">Project Name</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+             </div>
+              <div class="row">
+                <div class="col-lg-12">
+                    <h4 id="desc">Description</h4>
+                </div>
+                <!-- /.col-lg-12 -->
+             </div>
+             <div class="row">
+                <div class="col-lg-12">
+                    <h2 id="check">Checkpoints</h2>
+                </div>
+                <!-- /.col-lg-12 -->
+             </div>
+             <div class="row">
+                <div class="col-lg-12">
+                    <h4 id="cdesc">Description</h4>
+                </div>
+                <!-- /.col-lg-12 -->
+             </div>
+              <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Your Project Rating</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Area Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-area-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
 
 
+            <div class="row">
+            <form action="charge.php?p=<?PHP echo $_GET['p']?>" method="POST">
+              <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_Yn92oCfZDdHYyzwTgSWaggN4"
+                data-amount="2000"
+                data-name="Demo Site"
+                data-description="2 widgets ($2000.00)"
+                data-label="Pay with Card or Bitcoin"
+                data-locale="auto"
+                data-currency="usd"
+                data-bitcoin="true">
+              </script>
+              <div class="row" style="padding-top: 30px;">
+                <div class="col-lg-4"></div>
+
+                    <div class="col-lg-3">
+                <button type="submit" class="btn btn-default"><a href="eventsFinal.html">Participate</a></button>
+                </div>
+            </div>
+            </form>
+            
+            </div>
 
 
 
 
         </div>
+        <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+         <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+        <script type="text/javascript" src="fullpro.js"></script>
 </div>
  </body>
  </html>

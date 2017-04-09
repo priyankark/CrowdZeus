@@ -10,6 +10,7 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC))
 	{
 		$desc=array();
 		array_push($desc,array("pname"=>$row["pname"],
+			"pid"=>$row["pid"],
 			"cat"=>$row["cat"],
 			"city"=>$row["city"],
 			"state"=>$row["state"],

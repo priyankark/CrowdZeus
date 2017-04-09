@@ -4,58 +4,58 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+            Project1: 2666,
+            Project2: null,
+            Project3: 2647
         }, {
             period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+            Project1: 2778,
+            Project2: 2294,
+            Project3: 2441
         }, {
             period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+            Project1: 4912,
+            Project2: 1969,
+            Project3: 2501
         }, {
             period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+            Project1: 3767,
+            Project2: 3597,
+            Project3: 5689
         }, {
             period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+            Project1: 6810,
+            Project2: 1914,
+            Project3: 2293
         }, {
             period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+            Project1: 5670,
+            Project2: 4293,
+            Project3: 1881
         }, {
             period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+            Project1: 4820,
+            Project2: 3795,
+            Project3: 1588
         }, {
             period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+            Project1: 15073,
+            Project2: 5967,
+            Project3: 5175
         }, {
             period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+            Project1: 10687,
+            Project2: 4460,
+            Project3: 2028
         }, {
             period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+            Project1: 8432,
+            Project2: 5713,
+            Project3: 1791
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['Project1', 'Project2', 'Project3'],
+        labels: ['Project1', 'Project2', 'Project3'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
