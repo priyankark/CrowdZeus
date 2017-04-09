@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>UserInput</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+	</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<style>
+		.backclass{
+			font-size: 40px;
+			font-family: Helvetica;
+			padding-left: 60px;
+		}
+		.vertical { 
+       border-left: thick solid #000000;
+       border-left-width:1px;
+       height:500px;
+		}
+		.btn1{min-width:100px;}
+		.btn2{min-width:250px;}
+        body{
+            background-color: lightgray;
+        }
+        #out{
+          padding-top: 50px;
+        }
+        #card1{
+          border: solid black;
+          height: 300px;
+        }
+        #card2{
+          border: solid black;
+          height: 300px;
+        }
+	</style>
+</head>
+<body onload="geoFindMe()">
+	<header class="jumbotron" style="background-color:#1B5E20; color:floralwhite;  font-family: Lucida "> 
+        <!-- Main component for a primary marketing message or call to action -->
+
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-8">
+                    <h1><b>Edu-Trip</b></h1>
+                    <p>
+                      Because learning through experience inspires children to build a better <b>India</b>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-8">                  
+                </div>
+            </div>
+        </div>
+    </header>
+ <div class="container">  
+		 <div class="row row-content">
+          <div class="col-xs-12 col-sm-3">
+            <div class="card" >
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+              <div class="card-block">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+          <!--
+          <div class="col-xs-12 col-sm-4 col-sm-push-1" id="out">          
+              <div id="out"></div>
+          </div>-->
+          <div class="col-xs-12 col-sm-3">
+            <div class="card" >
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+              <div class="card-block">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>      
+    </div>
+      
+ </div>
+	   <!--</div>-->
+ <!--</div>-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script>
+  function geoFindMe() {
+    var output = document.getElementById("out");
+
+    if (!navigator.geolocation){
+      output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+      return;
+    }
+
+    function success(position) {
+      var latitude  = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      output.innerHTML = '<h3>Your location</h3><br><p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+      var img = new Image();
+      img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+      output.appendChild(img);
+    };
+
+    function error() {
+      output.innerHTML = "Unable to retrieve your location";
+    };
+
+    output.innerHTML = "<p>Locating…</p>";
+
+    navigator.geolocation.getCurrentPosition(success, error);
+  } 
+</script>
+</body>
+</html>
